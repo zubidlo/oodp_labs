@@ -31,7 +31,7 @@ public class Utils {
         out.format("Class: %n  %s%n%n", c.getName());
         printInterfaces(c);
         printInheritancePath(c);
-        printDeclaredConstructors(c);
+        printConstructors(c);
         printDeclaredFields(c);
         printMethods(c);
     }
@@ -47,17 +47,7 @@ public class Utils {
 
     }
 
-    private static void printDeclaredConstructors(Class c) {
-
-        Constructor[] declConstructors = c.getDeclaredConstructors();
-        out.format("Declared constructors:%n");
-        for (Constructor cons : declConstructors) {
-            out.format("  %s%n", cons.toString());
-        }
-        out.format("%n");
-    }
-
-    private static void printInterfaces(Class c) {
+   private static void printInterfaces(Class c) {
 
         out.format("Implemented Interfaces:%n");
         Type[] interfaces = c.getGenericInterfaces();
