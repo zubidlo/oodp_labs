@@ -1,27 +1,26 @@
 package lab_1;
-
 import static utilities.Utils.*;
-
 /**
  * Created by martin on 06/02/2015.
  */
-public class Exercise1 {
+public class Exercise2 {
 
     public static void main(String[] args) {
 
-        Pet dog =  new Exercise1().new Pet();
-        dog.setName("Rolf");
-        dog.setAge(10);
-
+        Pet dog = new Exercise2().new Pet();
         printClassInfo(dog);
     }
-
     private class Pet {
 
         private String name;
         private double age;
 
         Pet() {}
+
+        Pet(String name) {
+
+            this.name = name;
+        }
 
         Pet(String name, double age) {
 
@@ -46,5 +45,3 @@ public class Exercise1 {
         }
     }
 }
-
-
