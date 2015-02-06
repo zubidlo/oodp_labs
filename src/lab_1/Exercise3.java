@@ -1,4 +1,5 @@
 package lab_1;
+
 import static java.lang.System.out;
 import static utilities.Utils.printClassInfo;
 
