@@ -8,12 +8,23 @@ import java.util.List;
 import static java.lang.System.out;
 
 /**
+ * Some useful static methods.
  * Created by martin on 06/02/2015.
  * from:
  * <a href="http://docs.oracle.com/javase/tutorial/reflect/class/classModifiers.html">Reflection tutorial</a>
  */
 public class Utils {
 
+    /**
+     * Prints Extensive Class information about given object:
+     * Interfaces it implements,
+     * it's inheritance path,
+     * it's declared constructors,
+     * it's declared fields,
+     * it's declared methods
+     * and all inherited methods.
+     * @param o Object
+     */
     public static void printClassInfo(Object o) {
 
         Class c = o.getClass();
