@@ -13,6 +13,6 @@ public class Exercise2 {
         out.println(new Pet(1));
         Pet dog = new Pet("Rolf", 5.6);
         out.println(dog);
-        printClassInfo(dog);
+        //printClassInfo(dog);
     }
 }

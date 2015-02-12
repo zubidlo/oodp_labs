@@ -9,8 +9,8 @@ import static java.lang.System.out;
 public class Cat extends Pet {
 
     //added for exercise 4
-//    @Override
-//    public void feedPet() { out.println(toString() + "was fed with " + favoriteFood + ".\n"); }
+    @Override
+    public void feedPet() { out.println(toString() + "was fed with " + favoriteFood + ".\n"); }
 
     @Override
     public String toString() {

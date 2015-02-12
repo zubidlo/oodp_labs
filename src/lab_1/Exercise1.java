@@ -15,7 +15,7 @@ public class Exercise1 {
         dog.setAge(10);
 
         out.println(dog);
-        printClassInfo(dog);
+        //printClassInfo(dog);
     }
 
 }

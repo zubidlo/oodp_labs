@@ -18,7 +18,7 @@ public class Exercise3 {
 
         for(Pet pet : pets) {
             out.println(pet);
-            printClassInfo(pet);
+            //printClassInfo(pet);
         }
     }
 }
