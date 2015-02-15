@@ -1,20 +1,33 @@
 package lab_2.part_3;
-/**
- * Created by martin on 14/02/2015.
- */
-public class AccountFactory {
+
+import java.util.regex.*;
+import static java.lang.System.*;
+
+class AccountFactory {
 
     /**
-     * Creates an instance of account based on id
+     * Creates an instance of account based on id.
      * @param id "C233543" or "I34343"
      * @return instance of account
      */
     AbstractAccount getAccount(String id) throws IllegalArgumentException{
 
-        if (id.toUpperCase().charAt(0) == 'C') { return new CurrentAccount(id); }
-        if (id.toUpperCase().charAt(0) == 'I') { return new InvestmentAccount(id); }
+        AbstractAccount account;
 
-        throw new IllegalArgumentException("Bad account id!");
+        //determine which instance of account to return
+        if (Pattern.compile("^[cC]\\d+$").matcher(id).find()) {
+            account = new CurrentAccount(id);
+        }
+        else if (Pattern.compile("^[iI]\\d+$").matcher(id).find()) {
+            account = new InvestmentAccount(id);
+        }
+        else {
+            throw new IllegalArgumentException("Bad account id format:'" + id + "'!");
+        }
+
+        out.format("Account factory created instance of %s from id:'%s'%n",
+                account.getClass().getSimpleName(), id);
+        return account;
     }
 
     /**

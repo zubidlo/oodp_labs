@@ -4,10 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 
-/**
- * Created by martin on 12/02/2015.
- */
-public abstract class AbstractHobbyView extends JFrame
+abstract class AbstractHobbyView extends JFrame
         implements Runnable {
 
     //canvas
@@ -24,7 +21,7 @@ public abstract class AbstractHobbyView extends JFrame
      * Creates JFrame with given title
      * @param title title of the frame
      */
-    public AbstractHobbyView(String title) {
+    AbstractHobbyView(String title) {
 
         //create frame components
         canvas = new JPanel(new BorderLayout());
@@ -54,13 +51,13 @@ public abstract class AbstractHobbyView extends JFrame
      * Returns the array of buttons for listener attachment.
      * @return list of buttons etc for which a listener is needed
      */
-    public Vector<JButton> getButtons() { return buttons; }
+    Vector<JButton> getButtons() { return buttons; }
 
     /**
      * Modifies current view list of hobbies and validates the components, so changes are visible.
      * @param hobbies hobbies to refill list with
      */
-    public abstract void refillViewList(Vector<Hobby> hobbies);
+    abstract void refillViewList(Vector<Hobby> hobbies);
 
     @Override
     public void run() {}

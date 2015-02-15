@@ -1,18 +1,15 @@
 package lab_2.part_2;
 
-/**
- * Created by martin on 13/02/2015.
- */
-public abstract class NumberList {
+abstract class NumberList {
 
     protected int[] intList;
     protected double[] doubleList;
     protected char[] charList;
 
-    public abstract void display();
-    public abstract Number sum();
+    abstract void display();
+    abstract Number sum();
 
-    public int[] getIntList() { return intList; }
-    public double[] getDoubleList() { return doubleList; }
-    public char[] getCharList() { return charList; }
+    int[] getIntList() { return intList; }
+    double[] getDoubleList() { return doubleList; }
+    char[] getCharList() { return charList; }
 }

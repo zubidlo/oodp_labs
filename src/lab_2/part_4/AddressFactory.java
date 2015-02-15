@@ -1,9 +1,6 @@
 package lab_2.part_4;
 
-/**
- * Created by martin on 14/02/2015.
- */
-class AddressFactory {
+final class AddressFactory {
 
     /**
      * Creates new Address JPanel based on menu item clicked

@@ -2,9 +2,6 @@ package lab_2.part_4;
 
 import javax.swing.*;
 
-/**
- * Created by martin on 14/02/2015.
- */
 final class USAAddress extends Address {
 
     private final String zipCode, state;
@@ -37,7 +34,7 @@ final class USAAddress extends Address {
     }
 
     /**
-     * String representation of Ireland address.
+     * String representation of Usa address.
      * @return formatted text
      */
     @Override

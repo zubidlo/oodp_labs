@@ -4,10 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 
-/**
- * Created by martin on 12/02/2015.
- */
-public class ComboView extends AbstractHobbyView {
+class ComboView extends AbstractHobbyView {
 
     private final JComboBox<Hobby> comboBox;
 
@@ -16,7 +13,7 @@ public class ComboView extends AbstractHobbyView {
      * @param title  title of the frame
      * @param hobbies vector of hobbies
      */
-    public ComboView(String title, Vector<Hobby> hobbies) {
+    ComboView(String title, Vector<Hobby> hobbies) {
 
         super(title);
 
@@ -31,7 +28,7 @@ public class ComboView extends AbstractHobbyView {
      * @param hobbies hobbies to refill combo box with
      */
     @Override
-    public void refillViewList(Vector<Hobby> hobbies) {
+    void refillViewList(Vector<Hobby> hobbies) {
 
         comboBox.setModel(new DefaultComboBoxModel<Hobby>(hobbies));
     }

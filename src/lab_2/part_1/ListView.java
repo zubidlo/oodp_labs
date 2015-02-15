@@ -4,10 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 
-/**
- * Created by martin on 12/02/2015.
- */
-public class ListView extends AbstractHobbyView {
+class ListView extends AbstractHobbyView {
 
     private final JList<Hobby> list;
 
@@ -16,7 +13,7 @@ public class ListView extends AbstractHobbyView {
      * @param title  title of the frame
      * @param hobbies vector of hobbies
      */
-    public ListView(String title, Vector<Hobby> hobbies) {
+    ListView(String title, Vector<Hobby> hobbies) {
 
         super(title);
 
@@ -33,5 +30,5 @@ public class ListView extends AbstractHobbyView {
      * Puts hobbies in list.
      * @param hobbies hobbies to refill list with.
      */
-    public void refillViewList(Vector<Hobby> hobbies) { list.setListData(hobbies); }
+    void refillViewList(Vector<Hobby> hobbies) { list.setListData(hobbies); }
 }

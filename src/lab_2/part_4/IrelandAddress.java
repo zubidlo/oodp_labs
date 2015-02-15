@@ -2,9 +2,6 @@ package lab_2.part_4;
 
 import javax.swing.*;
 
-/**
- * Created by martin on 14/02/2015.
- */
 final class IrelandAddress extends Address {
 
     private final String county;

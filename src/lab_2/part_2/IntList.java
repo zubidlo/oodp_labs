@@ -2,7 +2,9 @@ package lab_2.part_2;
 
 import java.util.StringTokenizer;
 
-public class IntList extends NumberList {
+import static java.lang.System.out;
+
+class IntList extends NumberList {
 
     int size;
 
@@ -19,22 +21,19 @@ public class IntList extends NumberList {
     }
 
     @Override
-    public void display() {
+    Number sum() {
 
-        System.out.println("\nInteger List");
-        for(int i = 0; i < size; i++) {
-            System.out.println("[" + i + "] = " + intList[i]);
-        }
+        int n = 0;
+        for(int i = 0; i < size; i++) { n += intList[i]; }
+        return new Integer(n);
     }
 
     @Override
-    public Number sum() {
+    void display() {
 
-        int n = 0;
-        for(int i = 0; i < size; i++)
-        {
-            n = n + intList[i];
+        out.format("%nitems:%n");
+        for(int i = 0; i < size; i++) {
+            System.out.println("[" + i + "] = " + intList[i]);
         }
-        return new Integer(n);
     }
 }

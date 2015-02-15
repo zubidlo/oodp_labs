@@ -1,9 +1,6 @@
 package lab_2.part_3;
 
-/**
- * Created by martin on 14/02/2015.
- */
-public class InvestmentAccount extends AbstractAccount {
+class InvestmentAccount extends AbstractAccount {
 
     /**
      * Creates investment account with given id

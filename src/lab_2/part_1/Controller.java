@@ -3,10 +3,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.util.Vector;
 
-/**
- * Created by martin on 12/02/2015.
- */
-public class Controller implements ActionListener{
+class Controller implements ActionListener{
 
     //model
     private final HobbyList model;
@@ -20,7 +17,7 @@ public class Controller implements ActionListener{
      * @param model hobby list model
      * @param views front-end view JFrame windows
      */
-    public Controller(HobbyList model, AbstractHobbyView...views) {
+    Controller(HobbyList model, AbstractHobbyView...views) {
 
         this.model = model;
         this.views = views;

@@ -1,25 +1,27 @@
 package lab_2.part_2;
 
 import static java.lang.System.*;
-/**
- * Created by martin on 13/02/2015.
- */
-public class AlphaCharacterList extends NumberList {
 
-    AlphaCharacterList(String list) {
+class AlphaCharacterList extends NumberList {
 
-        charList = list.replaceAll(",", "").toCharArray();
+    /**
+     * Creates character list.
+     * @param charList "a,b,c..."
+     */
+    AlphaCharacterList(String charList) {
+
+        this.charList = charList.replaceAll(",", "").toCharArray();
     }
 
     @Override
-    public void display() {
+    void display() {
 
-        out.println("\nAlpha Character List");
+        out.format("%nitems:%n");
         for (int i = 0; i < charList.length; i++) {
             out.format("[%d] = %s%n", i, charList[i]);
         }
     }
 
     @Override
-    public Number sum() { return null; }
+    Number sum() { return null; }
 }

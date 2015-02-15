@@ -1,17 +1,14 @@
 package lab_2.part_1;
 import java.util.*;
 
-/**
- * Created by martin on 12/02/2015.
- */
-public class HobbyList {
+class HobbyList {
 
     private final Vector<Hobby> hobbies;
 
     /**
      * Creates hobby list with default hobbies in it.
      */
-    public HobbyList() {
+    HobbyList() {
 
         hobbies = new Vector<Hobby>();
         addHobby(new Hobby("hobby1"));
@@ -27,16 +24,16 @@ public class HobbyList {
     }
 
     /**
-     * Adds a hobby to hobby list
+     * Adds a hobby to hobby list.
      * @param hobby Hobby to add
      */
-    public void addHobby(Hobby hobby) { hobbies.add(hobby); }
+    void addHobby(Hobby hobby) { hobbies.add(hobby); }
 
     /**
      * Returns hobbies.
      * @return list of hobbies
      */
-    public Vector<Hobby> getHobbies() { return hobbies; }
+    Vector<Hobby> getHobbies() { return hobbies; }
 
     /**
      * String representation of hobby list.

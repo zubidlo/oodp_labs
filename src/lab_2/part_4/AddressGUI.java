@@ -5,13 +5,11 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 
-/**
- * Created by martin on 14/02/2015.
- */
-class AddressGUI extends JFrame implements Runnable, ActionListener {
+final class AddressGUI extends JFrame implements Runnable, ActionListener {
 
     private final Vector<Address> addresses;
     private final AddressFactory addressFactory;
+    private final JMenuItem UsaAddressMI, IrelandAddressMI, listAddresses;
     private JPanel currentPanel;
 
     AddressGUI() {
@@ -21,12 +19,9 @@ class AddressGUI extends JFrame implements Runnable, ActionListener {
         addressFactory = new AddressFactory();
 
         //menu
-        JMenuItem UsaAddressMI = new JMenuItem("new USA Address");
-        UsaAddressMI.addActionListener(this);
-        JMenuItem IrelandAddressMI = new JMenuItem("new Ireland Address");
-        IrelandAddressMI.addActionListener(this);
-        JMenuItem listAddresses = new JMenuItem("List Addresses");
-        listAddresses.addActionListener(this);
+        UsaAddressMI = new JMenuItem("new USA Address");
+        IrelandAddressMI = new JMenuItem("new Ireland Address");
+        listAddresses = new JMenuItem("List Addresses");
         JMenu menu = new JMenu("Addresses");
         menu.add(UsaAddressMI);
         menu.add(IrelandAddressMI);
@@ -44,6 +39,10 @@ class AddressGUI extends JFrame implements Runnable, ActionListener {
 
     @Override
     public void run() {
+
+        UsaAddressMI.addActionListener(this);
+        IrelandAddressMI.addActionListener(this);
+        listAddresses.addActionListener(this);
 
         addresses.add(addressFactory.getAddressByArguments("34 Long st.", "Village", "1232", "New York"));
         addresses.add(addressFactory.getAddressByArguments("300 Short st.", "Finglas", "Dublin"));

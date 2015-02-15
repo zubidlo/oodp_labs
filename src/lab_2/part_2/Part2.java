@@ -1,9 +1,7 @@
 package lab_2.part_2;
 import static java.lang.System.*;
-/**
- * Created by martin on 13/02/2015.
- */
-public class Part2 {
+
+class Part2 {
 
     public static void main(String[] args) {
 
@@ -17,9 +15,8 @@ public class Part2 {
 
         for(String list : lists) {
             NumberList numList = nFactory.getNumberList(list);
-            out.format("%nfactory created instance of %s%n", numList.getClass().getSimpleName());
             numList.display();
-            out.println("sum:" + numList.sum());
+            out.format("sum:%s%n", numList.sum());
         }
     }
 }
