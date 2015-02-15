@@ -1,12 +1,11 @@
-package lab_1;
+package lab_1.part_1;
 
-import static utilities.Utils.*;
 import static java.lang.System.out;
 
 /**
- * Created by martin on 06/02/2015.
+ * Created by martin on 15/02/2015.
  */
-public class Exercise1 {
+public class Part1 {
 
     public static void main(String[] args) {
 
@@ -17,7 +16,4 @@ public class Exercise1 {
         out.println(dog);
         //printClassInfo(dog);
     }
-
 }
-
-

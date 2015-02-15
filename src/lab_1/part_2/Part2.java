@@ -1,10 +1,9 @@
-package lab_1;
-import static utilities.Utils.*;
+package lab_1.part_2;
 import static java.lang.System.out;
 /**
  * Created by martin on 06/02/2015.
  */
-public class Exercise2 {
+public class Part2 {
 
     public static void main(String[] args) {
 
