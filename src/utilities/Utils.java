@@ -1,10 +1,8 @@
 package utilities;
 
 import java.lang.reflect.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
+
 import static java.lang.System.out;
 
 /**
@@ -110,5 +108,17 @@ public class Utils {
             l.add(ancestor);
             printAncestor(ancestor, l);
         }
+    }
+
+    private static Random rand = new Random();
+
+    /**
+     * Returns random int from O to upperLimit not included.
+     * @param upperLimit upper limit
+     * @return random integer
+     */
+    public static int rand(int upperLimit) {
+
+        return rand.nextInt(upperLimit);
     }
 }

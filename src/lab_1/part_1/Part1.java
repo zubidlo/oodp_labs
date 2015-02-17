@@ -1,6 +1,7 @@
 package lab_1.part_1;
 
 import static java.lang.System.out;
+import static utilities.Utils.*;
 
 /**
  * Created by martin on 15/02/2015.
