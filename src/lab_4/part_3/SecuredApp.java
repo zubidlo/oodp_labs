@@ -11,8 +11,8 @@ class SecuredApp extends AppWelcome {
     @Override
     JFrame getGUI(String userType) {
 
-        if(userType.equals("Returning User")) return new LoginFrame();
-        if(userType.equals("New User")) return new RegisterFrame();
+        if(userType.equals("Returning User")) return new LoginFrame();
+        if(userType.equals("New User")) return new RegisterFrame();
         throw new RuntimeException("Bad argument!");
     }
 }

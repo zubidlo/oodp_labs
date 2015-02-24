@@ -1,7 +1,7 @@
 cls
 md bin
-SET DIR_FOR_CLASSES="./bin"
-SET CLASSES="./bin;"
+SET DIR_FOR_CLASSES="./src"
+SET CLASSES="./src;"
 
 dir /s /B *.java > sources.txt
 javac -classpath %CLASSES% -d %DIR_FOR_CLASSES% @sources.txt
