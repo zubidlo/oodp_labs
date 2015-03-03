@@ -13,16 +13,13 @@ import javax.swing.*;
 
 class SampleSolarSystem {
 
-    private static JTextArea displayArea;
-    private static JFrame frame;
-
     //refactored
 	public static void main(String[] args) {
 
         //create swing components
-        displayArea = new JTextArea(15,38);
+        JTextArea displayArea = new JTextArea(15,38);
         displayArea.setEditable(false);
-        frame = new JFrame();
+        JFrame frame = new JFrame();
         frame.getContentPane().add(new JScrollPane(displayArea));
         frame.pack();
         frame.setDefaultCloseOperation(frame.DISPOSE_ON_CLOSE);
