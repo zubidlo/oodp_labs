@@ -6,7 +6,7 @@ import javax.swing.*;
 /**
  * Created by lecturer, refactored by Martin Zuber.
  */
-public class ListBoxChoice extends MultiChoice {
+class ListBoxChoice extends MultiChoice {
 
     private final JawtList list;
     private final JPanel panel;
