@@ -2,7 +2,6 @@ package utilities;
 
 import java.lang.reflect.*;
 import java.util.*;
-
 import static java.lang.System.out;
 
 /**
@@ -113,7 +112,7 @@ public class Utils {
     private static Random rand = new Random();
 
     /**
-     * Returns random int from O to upperLimit not included.
+     * Returns random integer from O included to upperLimit excluded.
      * @param upperLimit upper limit
      * @return random integer
      */

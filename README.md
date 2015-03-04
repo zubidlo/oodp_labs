@@ -1,7 +1,6 @@
-Object Orientation with Design Patterns Labs using Java 7 and Intellij IDEA
+Object Orientation with Design Patterns Labs using Java
 
-labs can be compiled with "compile_all.bat"
+Windows os:
 
-compilation will create bin/ folder and will put all .class files there
-
-labs can be then run by "run_whatever_lab.bat"
+all the labs can be compiled with "compile_all.bat"
+a lab can be then run with "run_whatever_lab.bat"

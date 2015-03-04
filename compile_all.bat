@@ -1,5 +1,4 @@
 cls
-md bin
 SET DIR_FOR_CLASSES="./src"
 SET CLASSES="./src;"
 
