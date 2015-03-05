@@ -26,7 +26,7 @@ class DoubleList extends NumberList {
 
         double n = 0;
         for(int i = 0; i < size; i++) { n += doubleList[i]; }
-        return new Double(n);
+        return n;
     }
 
     @Override

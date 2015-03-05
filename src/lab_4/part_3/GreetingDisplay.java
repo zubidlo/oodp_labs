@@ -24,7 +24,7 @@ class GreetingDisplay extends JFrame {
         JFrame frame = new JFrame();
         frame.getContentPane().add(userTypeC, BorderLayout.SOUTH);
         frame.setSize(200, 100);
-        frame.setDefaultCloseOperation(frame.DISPOSE_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setVisible(true);
         frame.getContentPane().requestFocus();
     }

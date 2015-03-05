@@ -41,7 +41,7 @@ class AwardsGUI {
         frame.getContentPane().add(prizeL, BorderLayout.CENTER);
         frame.getContentPane().add(southPanel, BorderLayout.SOUTH);
         frame.setSize(230, 230);
-        frame.setDefaultCloseOperation(frame.DISPOSE_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setVisible(true);
         frame.getContentPane().requestFocus();
     }

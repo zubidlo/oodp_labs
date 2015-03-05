@@ -1,7 +1,5 @@
 package lab_3.part_3;
 
-import com.sun.javafx.binding.StringFormatter;
-
 /**
  * Represents a thing
  * Created by martin on 18/02/2015.

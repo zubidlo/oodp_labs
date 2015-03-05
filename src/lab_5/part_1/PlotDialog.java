@@ -5,18 +5,17 @@ import java.awt.event.*;
 import java.util.Arrays;
 
 /**
- * Created by lecturer, by Martin Zuber.
+ * Created by lecturer, slightly refactored by Martin Zuber.
  */
 class PlotDialog extends Dialog implements ActionListener {
 
-    private Button okButton;
     private MultiChoice multiChoice;
 
     PlotDialog(Frame frame, MultiChoice multiChoice) {
 
         super(frame, "Plotting:", true);
         this.multiChoice = multiChoice;
-        okButton = new Button("okButton");
+        Button okButton = new Button("okButton");
         Panel panel = new Panel();
         panel.add(okButton);
         String title = "";

@@ -17,7 +17,6 @@ abstract class Prize extends ImageIcon{
     /**
      * creates icon or null with error message to console
      * @param path relative path to icon
-     * @return icon
      */
     protected void makeIcon(String path) {
 

@@ -25,7 +25,7 @@ class IntList extends NumberList {
 
         int n = 0;
         for(int i = 0; i < size; i++) { n += intList[i]; }
-        return new Integer(n);
+        return n;
     }
 
     @Override

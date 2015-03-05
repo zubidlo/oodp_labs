@@ -79,10 +79,6 @@ class BattleGameInterface extends JFrame implements ActionListener {
         return damages[loc] == null && vehicles[loc] == null;
 	}
 
-    /**
-     * event on combo box
-     * @param e
-     */
 	public void actionPerformed(ActionEvent e) {
 
 		if(e.getSource() == selectBattle) {
@@ -94,10 +90,6 @@ class BattleGameInterface extends JFrame implements ActionListener {
 
     class ButtonListener implements ActionListener {
 
-        /**
-         * events on all the buttons in grid
-         * @param e
-         */
         @Override
         public void actionPerformed(ActionEvent e) {
             JButton button = (JButton) e.getSource();

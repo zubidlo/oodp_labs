@@ -6,7 +6,6 @@ import java.awt.event.*;
 //illustrates use of Abstract Factory pattern
 public class Gardener extends Frame implements ActionListener {
 
-    private Checkbox Veggie, Annual, Peren, Tree;
     private Button Center, Border, Shade, Quit;
     private Garden garden = null;
     private GardenPanel gardenPlot;
@@ -30,10 +29,10 @@ public class Gardener extends Frame implements ActionListener {
         left.setLayout(new GridLayout(5, 1)); // 4 rows and 1 column
         left.add(new Label("Garden type"));
         CheckboxGroup grp= new CheckboxGroup();
-        Veggie = new Checkbox("Vegetable", grp, false);
-        Annual = new Checkbox("Annual", grp, false);
-        Peren = new Checkbox("Perennial", grp, false);
-        Tree = new Checkbox("Tree", grp, false);
+        Checkbox Veggie = new Checkbox("Vegetable", grp, false);
+        Checkbox Annual = new Checkbox("Annual", grp, false);
+        Checkbox Peren = new Checkbox("Perennial", grp, false);
+        Checkbox Tree = new Checkbox("Tree", grp, false);
 
         left.add(Veggie);
         left.add(Annual);

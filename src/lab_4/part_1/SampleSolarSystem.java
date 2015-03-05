@@ -22,7 +22,7 @@ class SampleSolarSystem {
         JFrame frame = new JFrame();
         frame.getContentPane().add(new JScrollPane(displayArea));
         frame.pack();
-        frame.setDefaultCloseOperation(frame.DISPOSE_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         //solar system and sun
         SolarSystem solSystem = new SolarSystem();
