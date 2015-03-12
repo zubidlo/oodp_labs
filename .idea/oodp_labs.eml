@@ -3,7 +3,7 @@
 	<output-test url="file://$MODULE_DIR$/out/test/oodp_labs"/>
 	<exclude-output/>
 	<contentEntry url="file://$MODULE_DIR$"/>
-	<lib name="C:\Users\martin\Data\git_repos\oodp_labs\libs\LizardAndAlligator_Code_Supplied.jar" scope="COMPILE">
+	<lib name="LizardAndAlligator_Code_Supplied.jar" scope="COMPILE">
 		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/LizardAndAlligator_Code_Supplied.jar!/"/>
 	</lib>
 </component>
