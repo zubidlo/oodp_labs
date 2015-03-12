@@ -3,8 +3,6 @@ package lab_6.part_3;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import static lab_6.part_3.JuniorMathFacade.*;
-import static lab_6.part_3.PanelFactory.*;
 
 /**
  * test program
@@ -12,9 +10,12 @@ import static lab_6.part_3.PanelFactory.*;
  */
 class Part3 extends JFrame{
 
+    private MyPanel currentPanel;
+    private final static PanelFactory panelFactory = new PanelFactory();
+
     class MyMenu extends JMenu implements ActionListener {
 
-        private JMenuItem[] menuItems ={
+        private JMenuItem[] menuItems = {
                 new JMenuItem("Absolute Value"),
                 new JMenuItem("Cube Root"),
                 new JMenuItem("Square Root"),
@@ -32,20 +33,21 @@ class Part3 extends JFrame{
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println(e.getActionCommand());
-            getPanel(e.getActionCommand());
+            currentPanel = panelFactory.getPanel(e.getActionCommand());
+
+            getContentPane().removeAll();
+            getContentPane().add(currentPanel);
+            revalidate();
         }
     }
 
     Part3() {
         super("Facade Design Pattern");
-
         JMenuBar menuBar = new JMenuBar();
         menuBar.add(new MyMenu());
         setJMenuBar(menuBar);
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setSize(400, 400);
-        //pack();
+        setSize(400, 200);
         requestFocus();
         setVisible(true);
     }
