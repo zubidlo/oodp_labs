@@ -1,5 +1,7 @@
 package lab_1.part_1;
 
+import utilities.Utils;
+
 import static java.lang.System.out;
 
 /**
@@ -15,6 +17,6 @@ public class Part1 {
         dog.setAge(10);
 
         out.println(dog);
-        //printClassInfo(dog);
+        Utils.printClassInfo(dog);
     }
 }

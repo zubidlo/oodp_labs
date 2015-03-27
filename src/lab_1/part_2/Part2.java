@@ -1,6 +1,7 @@
 package lab_1.part_2;
 import static java.lang.System.out;
 /**
+ * part2
  * Created by martin on 06/02/2015.
  */
 public class Part2 {

@@ -1,6 +1,7 @@
 package lab_1.part_3;
 
 import lab_1.part_2.Pet;
+import java.util.Arrays;
 
 class Dog extends Pet {
 
@@ -25,15 +26,7 @@ class Dog extends Pet {
     @Override
     public String toString() {
 
-        String message = super.toString();
-        String[] tricks = getListOfTricks();
-
-        if( tricks.length > 0) {
-            message += " " + getName() + " can do these tricks:[";
-            for (String trick : getListOfTricks()) { message += " " + trick; }
-            message += " ].";
-        }
-
-        return message;
+        return String.format("%s can do these tricks: %s.",
+                super.toString(), String.join(", ", Arrays.asList(getListOfTricks())));
     }
 }

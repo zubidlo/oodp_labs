@@ -23,8 +23,7 @@ class Pet {
     @Override
     public String toString() {
 
-        return getName() + " is "
-                + getAge() + " years old "
-                + getClass().getSimpleName() + ".";
+        return String.format("%s is %.1f years old %s.",
+                getName(), getAge(), getClass().getSimpleName());
     }
 }

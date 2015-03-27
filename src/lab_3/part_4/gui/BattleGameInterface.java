@@ -9,6 +9,7 @@ import lab_3.part_4.factoryClasses.*;
 import lab_3.part_4.gamePieces.*;
 
 @SuppressWarnings("serial")
+//given to me by lecturer
 class BattleGameInterface extends JFrame implements ActionListener {
 
 	private static final int BOARD_SIDE = 5;

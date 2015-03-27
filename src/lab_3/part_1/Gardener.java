@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 //illustrates use of Abstract Factory pattern
+//given to me by lecturer and modified
 public class Gardener extends Frame implements ActionListener {
 
     private Button Center, Border, Shade, Quit;
@@ -148,13 +149,6 @@ public class Gardener extends Frame implements ActionListener {
      */
     class TreeListener implements ItemListener {
 
-        /**
-         * Invoked when an item has been selected or deselected by the user.
-         * The code written for this method performs the operations
-         * that need to occur when an item is selected (or deselected).
-         *
-         * @param e passed by event dispatch thread
-         */
         @Override
         public void itemStateChanged(ItemEvent e) {
             garden = new TreeGarden();

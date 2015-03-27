@@ -1,5 +1,8 @@
 package lab_1.part_4;
 
+import java.util.Arrays;
+import java.util.List;
+
 class Part4 {
 
     public static void main(String[] args) {
@@ -19,13 +22,7 @@ class Part4 {
         Cat peach = new Cat("Peach", 1.3);
         peach.setFavoriteFood("birds");
 
-        Pet[] pets = new Pet[5];
-        pets[0] = ralf;
-        pets[1] = wildo;
-        pets[2] = arrow;
-        pets[3] = mila;
-        pets[4] = peach;
-
-        for(Pet pet : pets) { pet.feedPet(); }
+        final List<Pet> pets = Arrays.asList(ralf, wildo, arrow, mila, peach);
+        pets.forEach(Pet::feedPet);
     }
 }
