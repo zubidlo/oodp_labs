@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
  * gui app
  * Created by martin on 24/02/2015.
  */
-class AwardsGUI {
+public class AwardsGUI {
 
     static JLabel textL, prizeL;
     static JComboBox<String> awardBodyC, positionC;
