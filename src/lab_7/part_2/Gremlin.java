@@ -13,14 +13,14 @@ import static java.lang.System.err;
 public class Gremlin {
 
     private static final String imageFilePath = "gremlin.jpg";
-    private static ImageIcon image;
     private final String name;
+    private static ImageIcon image;
 
-    Gremlin(final String name) {
+    Gremlin(String name) {
         this.name = name;
     }
 
-    ImageIcon getImage() {
+    public ImageIcon getImage() {
         if (image == null) {
             URL imgURL = getClass().getResource(imageFilePath);
             if(imgURL != null) image = new ImageIcon(imgURL);
@@ -29,7 +29,7 @@ public class Gremlin {
         return image;
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 }

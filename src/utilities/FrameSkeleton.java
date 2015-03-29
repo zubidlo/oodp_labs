@@ -1,7 +1,5 @@
 package utilities;
 
-import sun.java2d.pipe.hw.ExtendedBufferCapabilities;
-
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.event.*;
