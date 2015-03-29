@@ -3,8 +3,9 @@ package lab_2.part_1;
 import javax.swing.*;
 import java.awt.*;
 import java.util.*;
+import utilities.*;
 
-abstract class AbstractHobbyView extends JFrame
+abstract class AbstractHobbyView extends FrameSkeleton
         implements Runnable {
 
     //canvas
@@ -23,6 +24,7 @@ abstract class AbstractHobbyView extends JFrame
      */
     AbstractHobbyView(String title) {
 
+        super(title);
         //create frame components
         canvas = new JPanel(new BorderLayout());
         textField = new JTextField("", 20);
@@ -40,11 +42,8 @@ abstract class AbstractHobbyView extends JFrame
         canvas.add(textField, BorderLayout.WEST);
         canvas.add(addButton, BorderLayout.CENTER);
         getContentPane().add(canvas);
-        canvas.requestFocusInWindow();
-        pack();
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setResizable(true);
-        setVisible(true);
+        //pack();
+        SwingUtilities.updateComponentTreeUI(this);
     }
 
     /**

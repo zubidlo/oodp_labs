@@ -1,5 +1,7 @@
 package lab_5.part_2;
 
+import utilities.FrameSkeleton;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -8,7 +10,7 @@ import java.awt.event.*;
  * main GUI.
  * Created by Martin Zuber on 04/03/2015.
  */
-class Part2 {
+class Part2 extends FrameSkeleton {
 
     private static final String[] decoratorChoices = {
             "blue border decorator",
@@ -16,15 +18,12 @@ class Part2 {
             "no border decorator"};
 
     private static LabelWithMouseListener label;
-    private static JFrame frame;
     private static JPanel centerPanel;
 
-    public static void main(String[] arg) {
-
+    private Part2(String title) {
+        super(title);
         label = new SimpleLabel();
-        frame = new JFrame("Decorator Pattern");
         centerPanel = new JPanel();
-
         JPanel southPanel = new JPanel();
         JComboBox<String> chooseDecorator = new JComboBox<String>(decoratorChoices);
         chooseDecorator.setSelectedItem(null);
@@ -43,17 +42,20 @@ class Part2 {
                     label = new NoBorderDecorator(new SimpleLabel());
 
                 centerPanel.add(label);
-                frame.validate();
+                validate();
             }
         });
 
         centerPanel.add(label);
         southPanel.add(chooseDecorator);
-        frame.getContentPane().add(centerPanel, BorderLayout.CENTER);
-        frame.getContentPane().add(southPanel, BorderLayout.SOUTH);
-        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        frame.pack();
-        frame.requestFocus();
-        frame.setVisible(true);
+        getContentPane().add(centerPanel, BorderLayout.CENTER);
+        getContentPane().add(southPanel, BorderLayout.SOUTH);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        pack();
+    }
+
+    public static void main(String[] arg) {
+
+        Part2 part2 = new Part2("Decorator pattern");
     }
 }

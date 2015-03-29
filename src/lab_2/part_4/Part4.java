@@ -6,6 +6,6 @@ public class Part4 {
 
     public static void main(String[] args) {
 
-        SwingUtilities.invokeLater(new Thread(new AddressGUI()));
+        SwingUtilities.invokeLater(new Thread(new AddressGUI("Address Factory")));
     }
 }

@@ -1,7 +1,7 @@
 package lab_3.part_4.gui;
 
 import static java.lang.System.out;
-import static utilities.Utils.rand;
+import utilities.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -10,7 +10,7 @@ import lab_3.part_4.gamePieces.*;
 
 @SuppressWarnings("serial")
 //given to me by lecturer
-class BattleGameInterface extends JFrame implements ActionListener {
+class BattleGameInterface extends FrameSkeleton implements ActionListener {
 
 	private static final int BOARD_SIDE = 5;
     private static int BOARD_SIZE = BOARD_SIDE * BOARD_SIDE;
@@ -23,7 +23,8 @@ class BattleGameInterface extends JFrame implements ActionListener {
 	private JComboBox selectBattle = new JComboBox<String>(selection);
     private BattleGameAbstractFactory factory = new LandGameConcreteFactory();
 
-	private BattleGameInterface() {
+	private BattleGameInterface(String title) {
+        super(title);
         buttonP.setLayout(new GridLayout(BOARD_SIDE, BOARD_SIDE));
 		createGrid();
         JPanel selectionP = new JPanel();
@@ -32,9 +33,6 @@ class BattleGameInterface extends JFrame implements ActionListener {
 		getContentPane().add(buttonP);
         getContentPane().add(selectionP,BorderLayout.SOUTH);
         resetGame();
-		setSize(400,400);
-        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-		setVisible(true);
 	}
 
 	private void createGrid() {
@@ -63,7 +61,7 @@ class BattleGameInterface extends JFrame implements ActionListener {
     //sets 3 random vehicles or damages to appropriate array
     private void setItems(String className) {
         for(int i = 0; i < ITEM_LIMIT; i++) {
-            int rand = rand(BOARD_SIZE);
+            int rand = Utils.rand(BOARD_SIZE);
             if(isFreeCell(rand)) {
                 out.format("piece generated to location:%d%n", rand);
                 if(className.equals("vehicles"))
@@ -107,6 +105,6 @@ class BattleGameInterface extends JFrame implements ActionListener {
     }
 
 	public static void main(String[] args) {
-		new BattleGameInterface();
+		new BattleGameInterface("Battle Game");
 	}
 }

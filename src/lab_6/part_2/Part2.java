@@ -1,5 +1,7 @@
 package lab_6.part_2;
 
+import utilities.FrameSkeleton;
+
 import javax.swing.*;
 import javax.swing.event.*;
 import javax.swing.tree.*;
@@ -9,12 +11,13 @@ import java.util.*;
  * gui
  * Created by Martin Zuber on 11/03/2015.
  */
-class Part2 implements TreeModel{
+class Part2 extends FrameSkeleton implements TreeModel {
 
     private final AbstractProject root;
     private final List<TreeModelListener> listeners;
 
-    private Part2(Project root) {
+    private Part2(Project root, String title) {
+        super(title);
         this.root = root;
         listeners = new ArrayList<TreeModelListener>();
         initTreeModel(root);
@@ -29,13 +32,7 @@ class Part2 implements TreeModel{
         tree.setCellRenderer(renderer);
         tree.putClientProperty("JTree.lineStyle", "Vertical");
         JScrollPane treeView = new JScrollPane(tree);
-
-        JFrame frame = new JFrame("Composite design pattern");
-        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        frame.getContentPane().add(treeView);
-        frame.setSize(400,400);
-        frame.requestFocus();
-        frame.setVisible(true);
+        getContentPane().add(treeView);
     }
 
     private void initTreeModel(Project root) {
@@ -64,12 +61,7 @@ class Part2 implements TreeModel{
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new Part2(new Project("Project"));
-            }
-        });
+        SwingUtilities.invokeLater(()->new Part2(new Project("Project"), "Composite design pattern"));
     }
 
     @Override

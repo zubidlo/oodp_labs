@@ -1,19 +1,22 @@
 package lab_2.part_4;
 
+import utilities.FrameSkeleton;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 
-final class AddressGUI extends JFrame implements Runnable, ActionListener {
+final class AddressGUI extends FrameSkeleton implements Runnable, ActionListener {
 
     private final Vector<Address> addresses;
     private final AddressFactory addressFactory;
     private final JMenuItem UsaAddressMI, IrelandAddressMI, listAddresses;
     private JPanel currentPanel;
 
-    AddressGUI() {
+    AddressGUI(String title) {
 
+        super(title);
         //addresses
         addresses = new Vector<Address>();
         addressFactory = new AddressFactory();
@@ -26,15 +29,8 @@ final class AddressGUI extends JFrame implements Runnable, ActionListener {
         menu.add(UsaAddressMI);
         menu.add(IrelandAddressMI);
         menu.add(listAddresses);
-        JMenuBar menuBar = new JMenuBar();
-        menuBar.add(menu);
-        setJMenuBar(menuBar);
-        pack();
-
-        //frame properties
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setResizable(true);
-        setVisible(true);
+        getJMenuBar().add(menu);
+        SwingUtilities.updateComponentTreeUI(this);
     }
 
     @Override

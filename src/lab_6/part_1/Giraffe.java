@@ -12,7 +12,7 @@ public class Giraffe extends Animal {
 
 	  public void feed() {
 	    System.out.println("You are feeding an animal of type " + species);
-	    System.out.println("This animal requires " + weight * feedingRate + " kg of " + foodType);
+          System.out.printf("This animal requires %.2f kg of %s%n", weight * feedingRate, foodType);
 	  }
 
 	}

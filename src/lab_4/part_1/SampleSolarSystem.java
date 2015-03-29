@@ -1,5 +1,7 @@
 package lab_4.part_1;
 
+import utilities.FrameSkeleton;
+
 import javax.swing.*;
 
 /**
@@ -11,25 +13,28 @@ import javax.swing.*;
  * The Sun class is a Singleton and the number of Sun objects cannot exceed max of Solar System
  */
 
-class SampleSolarSystem {
+class SampleSolarSystem extends FrameSkeleton{
+
+    final JTextArea displayArea;
+
+    SampleSolarSystem(String title) {
+        super(title);
+        displayArea = new JTextArea(15,38);
+        displayArea.setEditable(false);
+        getContentPane().add(new JScrollPane(displayArea));
+        pack();
+    }
 
     //refactored
 	public static void main(String[] args) {
 
-        //create swing components
-        JTextArea displayArea = new JTextArea(15,38);
-        displayArea.setEditable(false);
-        JFrame frame = new JFrame();
-        frame.getContentPane().add(new JScrollPane(displayArea));
-        frame.pack();
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        SampleSolarSystem sampleSolarSystem = new SampleSolarSystem("Solar System");
 
         //solar system and sun
         SolarSystem solSystem = new SolarSystem();
         Sun sol;
 
 		try {
-
             //create sun
             sol = Sun.createSun("Sol", solSystem, 1390000);
 
@@ -47,8 +52,7 @@ class SampleSolarSystem {
             solSystem.addSun(sol);
 
             //fill text area and show frame
-            displayArea.append(solSystem.toString());
-            frame.setVisible(true);
+            sampleSolarSystem.displayArea.append(solSystem.toString());
 
             //try to create second sun
             Sun.createSun("Second Sun", solSystem);
@@ -56,7 +60,7 @@ class SampleSolarSystem {
 		} catch (SolarSystemSunLimitException e) {
 
             //simplified
-			JOptionPane.showMessageDialog(frame,
+			JOptionPane.showMessageDialog(sampleSolarSystem,
                     e.getMessage(),
                     "Error",
                     JOptionPane.ERROR_MESSAGE);

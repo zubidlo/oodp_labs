@@ -1,5 +1,7 @@
 package lab_5.part_1;
 
+import utilities.FrameSkeleton;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
@@ -9,7 +11,7 @@ import javax.swing.event.*;
 /**
  * Created by lecturer, refactored by Martin Zuber.
  */
-class WealthBuilder extends JFrame
+class WealthBuilder extends FrameSkeleton
         implements ListSelectionListener, ActionListener {
 
     private static final Vector<String> BONDS = new Vector<String>(
@@ -33,9 +35,9 @@ class WealthBuilder extends JFrame
     private final ChoiceFactory choiceFactory;
     private MultiChoice multiChoice;
 
-    WealthBuilder() {
+    WealthBuilder(String title) {
 
-        super("Wealth Builder");
+        super(title);
 
         stockList = new JawtList();
         plot = new JButton("plot");
@@ -95,8 +97,8 @@ class WealthBuilder extends JFrame
         pl.setVisible(true);
     }
 
-    static public void main(String[] argv) {
-        new WealthBuilder();
+    static public void main(String[] args) {
+        new WealthBuilder("Wealth Builder");
     }
 }        
 

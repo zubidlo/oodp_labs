@@ -1,5 +1,7 @@
 package lab_6.part_3;
 
+import utilities.FrameSkeleton;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,7 +10,7 @@ import java.awt.event.ActionListener;
  * test program
  * Created by Martin Zuber on 12/03/2015.
  */
-class Part3 extends JFrame{
+class Part3 extends FrameSkeleton {
 
     private MyPanel currentPanel;
     private final static PanelFactory panelFactory = new PanelFactory();
@@ -43,21 +45,11 @@ class Part3 extends JFrame{
 
     Part3() {
         super("Facade Design Pattern");
-        JMenuBar menuBar = new JMenuBar();
-        menuBar.add(new MyMenu());
-        setJMenuBar(menuBar);
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setSize(400, 200);
-        requestFocus();
-        setVisible(true);
+        getJMenuBar().add(new MyMenu());
+        setSize(300,150);
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new Part3();
-            }
-        });
+        SwingUtilities.invokeLater(Part3::new);
     }
 }
