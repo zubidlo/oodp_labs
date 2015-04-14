@@ -1,7 +1,6 @@
 package lab_7.part_3;
 
 import javax.swing.*;
-import java.awt.*;
 
 /**
  * Command interface

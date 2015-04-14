@@ -8,7 +8,6 @@ public class WebClient {
 
     public static void main(String[] args){
 
-        WebServer server = new ProxyLocalServer();
-        server.getConnection();
+        new ProxyLocalServer().getConnection();
     }
 }
