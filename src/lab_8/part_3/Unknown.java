@@ -33,7 +33,7 @@ public class Unknown implements Chain {
         if(object instanceof ImageIcon) {
             ImageIcon icon = (ImageIcon) object;
             if(icon.getDescription() == "unknown") Part3.unrecognizedScorePanel.getScoreLabel().setIcon(icon);
-            else Part3.unrecognizedScorePanel.getScoreLabel().setIcon(Part3.icons.get(4));
+            else Part3.unrecognizedScorePanel.getScoreLabel().setIcon(Icons.EMPTY);
         }
     }
 }

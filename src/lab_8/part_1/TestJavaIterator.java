@@ -1,15 +1,15 @@
 package lab_8.part_1;
 
-import java.util.Iterator;
-import java.util.Vector;
+import java.util.*;
+import static java.lang.System.*;
 
 /**
  * Created by martin on 14/04/2015.
  */
 public class TestJavaIterator {
 
-    private static Vector<Animal> animals = new Vector<>();
     public static void main(String[] args) {
+        Vector<Animal> animals = new Vector<>();
         animals.add(new Pig());
         animals.add(new Dog());
         animals.add(new Sheep());
@@ -17,9 +17,13 @@ public class TestJavaIterator {
         animals.add(new Dog());
         animals.add(new Dog());
 
+        out.println("\nVector.iterator test:");
         Iterator<Animal> animalIterator = animals.iterator();
-        while (animalIterator.hasNext())
-            System.out.println(animalIterator.next());
+        while (animalIterator.hasNext()) out.println(animalIterator.next());
+
+        out.println("\nMyIterator test:");
+        Iterator<Animal> myAnimalIterator = new MyIterator<>(animals);
+        while (myAnimalIterator.hasNext()) out.println(myAnimalIterator.next());
     }
 }
 

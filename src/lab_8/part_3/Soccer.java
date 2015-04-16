@@ -3,6 +3,7 @@ package lab_8.part_3;
 import javax.swing.*;
 
 /**
+ * soccer chain
  * Created by martin on 14/04/2015.
  */
 public class Soccer implements Chain {
@@ -33,7 +34,7 @@ public class Soccer implements Chain {
         if(object instanceof ImageIcon) {
             ImageIcon icon = (ImageIcon) object;
             if(icon.getDescription() == "soccer") Part3.soccerScorePanel.getScoreLabel().setIcon(icon);
-            else Part3.soccerScorePanel.getScoreLabel().setIcon(Part3.icons.get(4));
+            else Part3.soccerScorePanel.getScoreLabel().setIcon(Icons.EMPTY);
         }
     }
 }

@@ -10,23 +10,22 @@ import java.util.*;
 import java.util.List;
 
 /**
+ * part 3
  * Created by martin on 14/04/2015.
  */
 public class Part3 extends FrameSkeleton {
 
-    private static final Chain chain = new Soccer(new Basketball(new Rugby(new Unknown(null))));
-    private static final JComboBox<String> comboBox = new JComboBox(new String[]{"ball 1", "ball 2", "ball 3", "ball 4"});
-    public static final List<ImageIcon> icons = new ArrayList<>();
-    static {
-        Arrays.asList("soccer", "basketball", "rugby", "unknown", "empty")
-                .forEach(f -> icons.add(loadIcon(f)));
-    }
-    private static JLabel ballLabel = new JLabel(icons.get(4));
-    private static final JPanel decisionPanel = buildDecisionPanel();
     public static final ScorePanel soccerScorePanel = new ScorePanel("Soccer Score!");
     public static final ScorePanel basketballScorePanel = new ScorePanel("Basketball Score!");
     public static final ScorePanel rugbyScorePanel = new ScorePanel("Rugby Score!");
     public static final ScorePanel unrecognizedScorePanel = new ScorePanel("Unrecognized Score!");
+    public static final List<ImageIcon> icons = Arrays.asList(Icons.SOCCER, Icons.BASKETBALL, Icons.RUGBY, Icons.UNKNOWN);
+
+    private static final Chain chain = new Soccer(new Basketball(new Rugby(new Unknown(null))));
+    private static final JComboBox<String> comboBox = new JComboBox(new String[]{"ball 1", "ball 2", "ball 3", "ball 4"});
+    private static final int startSelectedIndex = 3;
+    private static JLabel ballLabel = new JLabel(Icons.EMPTY);
+    private static final JPanel decisionPanel = buildDecisionPanel();
 
     public Part3(final String title) {
         super(title);
@@ -38,18 +37,26 @@ public class Part3 extends FrameSkeleton {
         getContentPane().add(rugbyScorePanel);
         getContentPane().add(unrecognizedScorePanel);
         pack();
+        comboBox.setSelectedIndex(startSelectedIndex);
+        processSelection(comboBox.getSelectedIndex());
         comboBox.addActionListener(this::consumeEvent);
+        comboBox.requestFocus();
     }
 
     private void consumeEvent(ActionEvent e) {
         JComboBox<String> box;
         if(e.getSource() instanceof JComboBox) {
             box = (JComboBox) e.getSource();
-            ImageIcon icon = icons.get(box.getSelectedIndex());
-            ballLabel.setIcon(icon);
-            pack();
-            chain.sendToChain(icon);
+            processSelection(box.getSelectedIndex());
         }
+    }
+
+    private void processSelection(int selectedIndex) {
+
+        ImageIcon icon = icons.get(selectedIndex);
+        ballLabel.setIcon(icon);
+        pack();
+        chain.sendToChain(icon);
     }
 
     private static JPanel buildDecisionPanel() {
@@ -81,7 +88,7 @@ public class Part3 extends FrameSkeleton {
         public ScorePanel(String title) {
             setLayout(new BorderLayout());
             add(new JLabel(title), BorderLayout.NORTH);
-            scoreLabel = new JLabel(icons.get(4));
+            scoreLabel = new JLabel(Icons.EMPTY);
             add(scoreLabel, BorderLayout.CENTER);
             setBackground(Color.WHITE);
         }

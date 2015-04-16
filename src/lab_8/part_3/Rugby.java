@@ -3,6 +3,7 @@ package lab_8.part_3;
 import javax.swing.*;
 
 /**
+ * rugby chain
  * Created by martin on 14/04/2015.
  */
 public class Rugby implements Chain {
@@ -33,7 +34,7 @@ public class Rugby implements Chain {
         if(object instanceof ImageIcon) {
             ImageIcon icon = (ImageIcon) object;
             if(icon.getDescription() == "rugby") Part3.rugbyScorePanel.getScoreLabel().setIcon(icon);
-            else Part3.rugbyScorePanel.getScoreLabel().setIcon(Part3.icons.get(4));
+            else Part3.rugbyScorePanel.getScoreLabel().setIcon(Icons.EMPTY);
         }
     }
 }

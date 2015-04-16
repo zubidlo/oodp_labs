@@ -1,9 +1,7 @@
 package lab_8.part_3;
 
-import javax.swing.*;
-import javax.swing.text.html.ObjectView;
-
 /**
+ * chain interface
  * Created by martin on 14/04/2015.
  */
 public interface Chain {

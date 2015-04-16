@@ -18,6 +18,7 @@ public class Gremlin {
 
     Gremlin(String name) {
         this.name = name;
+        System.out.printf("created gremlin: %s with icon hashcode: %d%n", name, getImage().hashCode());
     }
 
     public ImageIcon getImage() {

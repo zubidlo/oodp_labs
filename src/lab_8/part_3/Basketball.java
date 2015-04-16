@@ -3,6 +3,7 @@ package lab_8.part_3;
 import javax.swing.*;
 
 /**
+ * basketball
  * Created by martin on 14/04/2015.
  */
 public class Basketball implements Chain {
@@ -33,7 +34,7 @@ public class Basketball implements Chain {
         if(object instanceof ImageIcon) {
             ImageIcon icon = (ImageIcon) object;
             if(icon.getDescription() == "basketball") Part3.basketballScorePanel.getScoreLabel().setIcon(icon);
-            else Part3.basketballScorePanel.getScoreLabel().setIcon(Part3.icons.get(4));
+            else Part3.basketballScorePanel.getScoreLabel().setIcon(Icons.EMPTY);
         }
     }
 }
