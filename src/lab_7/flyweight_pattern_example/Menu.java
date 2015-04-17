@@ -10,7 +10,7 @@ import java.util.Map;
 public class Menu {
 
     private Map<String, CoffeeFlavour> flavours
-            = new HashMap<String, CoffeeFlavour>();
+            = new HashMap<>();
 
     CoffeeFlavour lookup(String flavorName) {
         if (!flavours.containsKey(flavorName))

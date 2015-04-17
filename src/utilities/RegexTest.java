@@ -12,6 +12,7 @@ public class RegexTest {
             System.err.println("No console.");
             System.exit(1);
         }
+
         while (true) {
 
             Pattern pattern =

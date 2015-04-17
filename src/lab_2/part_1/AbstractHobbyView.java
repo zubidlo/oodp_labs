@@ -28,7 +28,7 @@ abstract class AbstractHobbyView extends FrameSkeleton
         //create frame components
         canvas = new JPanel(new BorderLayout());
         textField = new JTextField("", 20);
-        buttons = new Vector<JButton>();
+        buttons = new Vector<>();
         refreshButton = new JButton("refresh list");
         addButton = new JButton("add hobby");
 

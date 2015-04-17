@@ -19,7 +19,7 @@ public class Sun extends CelestialBody {
 	private double diameter  = 1000000;
     private String name;
 	private SolarSystem solarSystem;
-	private Vector<CelestialBody> orbitingBodies = new Vector<CelestialBody>();
+	private Vector<CelestialBody> orbitingBodies = new Vector<>();
 
 	private Sun(String name, SolarSystem solarSystem) {
 

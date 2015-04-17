@@ -16,7 +16,7 @@ class CheckBoxChoice extends MultiChoice {
         super(choices);
         panel = new JPanel();
         panel.setLayout(new GridLayout(choices.size(), 1));
-        checkBoxes = new ArrayList<JCheckBox>();
+        checkBoxes = new ArrayList<>();
 
         for (String choice : choices) {
             JCheckBox checkBox = new JCheckBox(choice);
@@ -32,7 +32,7 @@ class CheckBoxChoice extends MultiChoice {
 
     @Override
     String[] getSelected() {
-        ArrayList<String> selectedCheckBoxes = new ArrayList<String>();
+        ArrayList<String> selectedCheckBoxes = new ArrayList<>();
 
         for(JCheckBox checkBox : checkBoxes)
             if(checkBox.isSelected()) selectedCheckBoxes.add(checkBox.getText());

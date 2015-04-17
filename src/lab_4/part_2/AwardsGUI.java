@@ -21,11 +21,11 @@ public class AwardsGUI {
         AwardGUIListener listener = new AwardGUIListener();
 
         String[] selection1 = {"Athletics", "HorseShow"};
-        awardBodyC = new JComboBox<String>(selection1);
+        awardBodyC = new JComboBox<>(selection1);
         awardBodyC.addActionListener(listener);
 
         String[] selection = {"First", "Second", "Third"};
-        positionC = new JComboBox<String>(selection);
+        positionC = new JComboBox<>(selection);
         positionC.addActionListener(listener);
 
         setLabels(0, 0);

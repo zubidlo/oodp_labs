@@ -1,7 +1,6 @@
 package utilities;
 
 import javax.swing.*;
-import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.event.*;
 import java.util.*;
 import static javax.swing.UIManager.*;

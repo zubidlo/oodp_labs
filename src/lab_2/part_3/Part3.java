@@ -8,7 +8,7 @@ class Part3 {
     public static void main(String[] args) {
 
         AccountFactory factory = new AccountFactory();
-        List<AbstractAccount> accounts = new ArrayList<AbstractAccount>();
+        List<AbstractAccount> accounts = new ArrayList<>();
 
         accounts.add(factory.getAccount("C1223"));
         accounts.add(factory.getAccount("C5454", 45));

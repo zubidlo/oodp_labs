@@ -18,7 +18,7 @@ class GreetingDisplay extends JFrame {
         GreetingDisplayListener listener = new GreetingDisplayListener();
 
         String[] comboBoxSelection = {"Returning User", "New User"};
-        userTypeC = new JComboBox<String>(comboBoxSelection);
+        userTypeC = new JComboBox<>(comboBoxSelection);
         userTypeC.addActionListener(listener);
 
         JFrame frame = new JFrame();

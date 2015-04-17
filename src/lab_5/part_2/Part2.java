@@ -25,7 +25,7 @@ class Part2 extends FrameSkeleton {
         label = new SimpleLabel();
         centerPanel = new JPanel();
         JPanel southPanel = new JPanel();
-        JComboBox<String> chooseDecorator = new JComboBox<String>(decoratorChoices);
+        JComboBox<String> chooseDecorator = new JComboBox<>(decoratorChoices);
         chooseDecorator.setSelectedItem(null);
         chooseDecorator.addActionListener(new ActionListener() {
             @Override

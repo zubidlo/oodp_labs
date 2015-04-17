@@ -1,7 +1,5 @@
 package lab_8.part_2;
 
-import utilities.FrameSkeleton;
-
 import javax.swing.*;
 import java.awt.*;
 import java.util.Vector;

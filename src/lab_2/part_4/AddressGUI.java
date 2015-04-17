@@ -18,7 +18,7 @@ final class AddressGUI extends FrameSkeleton implements Runnable, ActionListener
 
         super(title);
         //addresses
-        addresses = new Vector<Address>();
+        addresses = new Vector<>();
         addressFactory = new AddressFactory();
 
         //menu
@@ -60,7 +60,7 @@ final class AddressGUI extends FrameSkeleton implements Runnable, ActionListener
         if (command.equals("Add to list")) {
 
             //I don't know how many textFields is on the panel at this moment...so vector;
-            Vector<String> fieldTexts = new Vector<String>();
+            Vector<String> fieldTexts = new Vector<>();
             for(Component component : currentPanel.getComponents()) {
                 if (component instanceof JTextField) {
                     fieldTexts.add(((JTextField) component).getText());

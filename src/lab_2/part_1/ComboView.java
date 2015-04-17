@@ -18,7 +18,7 @@ class ComboView extends AbstractHobbyView {
         super(title);
 
         //create specific components
-        comboBox = new JComboBox<Hobby>(hobbies);
+        comboBox = new JComboBox<>(hobbies);
         canvas.add(comboBox, BorderLayout.NORTH);
         pack();
     }
@@ -30,6 +30,6 @@ class ComboView extends AbstractHobbyView {
     @Override
     void refillViewList(Vector<Hobby> hobbies) {
 
-        comboBox.setModel(new DefaultComboBoxModel<Hobby>(hobbies));
+        comboBox.setModel(new DefaultComboBoxModel<>(hobbies));
     }
 }

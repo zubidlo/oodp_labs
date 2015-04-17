@@ -21,7 +21,7 @@ public class EarthMaker {
     }
 
     private static Vector<Thing> newThings() {
-        Vector<Thing> things = new Vector<Thing>(100);
+        Vector<Thing> things = new Vector<>(100);
         for(int i = 0; i < 100; i++) {
             if(rand(2) == 0) {
                 things.add(livFactory.getThing());

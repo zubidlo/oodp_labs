@@ -21,7 +21,7 @@ public class RadioButtonsChoice extends MultiChoice {
     RadioButtonsChoice(Vector<String> choices) {
         super(choices);
         panel = new JPanel(new GridLayout(choices.size(), 1));
-        radioButtons = new ArrayList<JRadioButton>();
+        radioButtons = new ArrayList<>();
 
         for(String choice : choices) {
 
@@ -38,7 +38,7 @@ public class RadioButtonsChoice extends MultiChoice {
 
     @Override
     String[] getSelected() {
-        ArrayList<String> selectedRadioButtons = new ArrayList<String>();
+        ArrayList<String> selectedRadioButtons = new ArrayList<>();
 
         for(JRadioButton radioButton : radioButtons)
             if(radioButton.isSelected()) selectedRadioButtons.add(radioButton.getText());

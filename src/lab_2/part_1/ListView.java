@@ -18,7 +18,7 @@ class ListView extends AbstractHobbyView {
         super(title);
 
         //create specific components
-        list = new JList<Hobby>(hobbies);
+        list = new JList<>(hobbies);
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         JScrollPane listScroll = new JScrollPane(list);
         listScroll.setPreferredSize(new Dimension(200, 300));

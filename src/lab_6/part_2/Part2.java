@@ -19,7 +19,7 @@ class Part2 extends FrameSkeleton implements TreeModel {
     private Part2(Project root, String title) {
         super(title);
         this.root = root;
-        listeners = new ArrayList<TreeModelListener>();
+        listeners = new ArrayList<>();
         initTreeModel(root);
 
         JTree tree = new JTree(this);

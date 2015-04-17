@@ -32,19 +32,8 @@ public class Part3 extends FrameSkeleton{
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         pack();
 
-        legoRobotB.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                letsMakeRobotTogether(new RobotDirector(legoRobotBuilder));
-            }
-        });
-
-        stickmanRobotB.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                letsMakeRobotTogether(new RobotDirector(stickmanRobotBuilder));
-            }
-        });
+        legoRobotB.addActionListener( e -> letsMakeRobotTogether(new RobotDirector(legoRobotBuilder)));
+        stickmanRobotB.addActionListener(e -> letsMakeRobotTogether(new RobotDirector(stickmanRobotBuilder)));
     }
 
     private void letsMakeRobotTogether(RobotDirector director) {

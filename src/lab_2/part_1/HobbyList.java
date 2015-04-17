@@ -10,7 +10,7 @@ class HobbyList {
      */
     HobbyList() {
 
-        hobbies = new Vector<Hobby>();
+        hobbies = new Vector<>();
         addHobby(new Hobby("hobby1"));
         addHobby(new Hobby("hobby2"));
         addHobby(new Hobby("hobby3"));

@@ -1,7 +1,6 @@
 package lab_7.part_2;
 
 import javax.swing.*;
-import java.awt.*;
 import java.net.URL;
 
 import static java.lang.System.err;

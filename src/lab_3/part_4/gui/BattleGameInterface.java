@@ -20,7 +20,7 @@ class BattleGameInterface extends FrameSkeleton implements ActionListener {
 	private DamageItem[] damages = new DamageItem[BOARD_SIZE];
 	private JPanel buttonP = new JPanel();
 	private final String[] selection = {"Land Battle","Sea Battle"};
-	private JComboBox selectBattle = new JComboBox<String>(selection);
+	private JComboBox selectBattle = new JComboBox<>(selection);
     private BattleGameAbstractFactory factory = new LandGameConcreteFactory();
 
 	private BattleGameInterface(String title) {
@@ -35,7 +35,7 @@ class BattleGameInterface extends FrameSkeleton implements ActionListener {
         resetGame();
 	}
 
-	private void createGrid() {
+    private void createGrid() {
         JButton button;
         ButtonListener listener = new ButtonListener();
 		for(int i = 0; i < BOARD_SIZE; i++) {

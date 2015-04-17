@@ -12,7 +12,7 @@ class Project extends AbstractProject{
 
     Project(String name) {
         super(name);
-        projects = new ArrayList<AbstractProject>();
+        projects = new ArrayList<>();
     }
 
     Project(Project parent, String name) {

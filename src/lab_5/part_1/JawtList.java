@@ -13,8 +13,8 @@ class JawtList extends JScrollPane implements ListSelectionListener, AwtList {
     private JListData<String> listContents;
 
     JawtList() {
-        listContents = new JListData<String>();
-        listWindow = new JList<String>(listContents);
+        listContents = new JListData<>();
+        listWindow = new JList<>(listContents);
         listWindow.setPrototypeCellValue("Abcdefg Hijkmnop");
         getViewport().add(listWindow);
     }
@@ -83,7 +83,7 @@ class JListData<String> extends AbstractListModel {
 
     JListData() {
 
-        data = new Vector<String>();
+        data = new Vector<>();
     }
 
     void addElement(String s) {
@@ -107,5 +107,6 @@ class JListData<String> extends AbstractListModel {
     public Object getElementAt(int index) {
         return data.elementAt(index);
     }
+
 }
 
