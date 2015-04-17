@@ -17,7 +17,7 @@ class ListBoxChoice extends MultiChoice {
         list.setMultipleMode(true);
         panel = new JPanel();
 
-        for(String choice : choices) list.add(choice);
+        choices.forEach(list::add);
 
         panel.add(list);
     }

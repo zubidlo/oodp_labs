@@ -19,8 +19,7 @@ public class CoffeeShop {
     }
 
     void service() {
-        for (Order order : orders)
-            order.serve();
+        orders.forEach(Order::serve);
     }
 
     String report() {

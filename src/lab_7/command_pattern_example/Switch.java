@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class Switch {
 
-    private List<Command> history = new ArrayList<Command>();
+    private List<Command> history = new ArrayList<>();
 
     public void storeAndExecute(Command cmd) {
         this.history.add(cmd); // optional

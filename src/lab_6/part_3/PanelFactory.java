@@ -56,18 +56,24 @@ class MyPanel extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         try{
             double x = Double.valueOf(numXF.getText());
-            if(actionCommand.equals("Absolute Value"))
-                resultL.setText(formatResult(absoluteValue((int) x)));
-            else if(actionCommand.equals("Cube Root"))
-                resultL.setText(formatResult(cubeRoot(x)));
-            else if(actionCommand.equals("Square Root"))
-                resultL.setText(formatResult(squareRoot(x)));
-            else if(actionCommand.equals("To the power of")) {
-                double y = Double.valueOf(numYF.getText());
-                resultL.setText(formatResult(xToThePowerOfy(x, y)));
+            switch (actionCommand) {
+                case "Absolute Value":
+                    resultL.setText(formatResult(absoluteValue((int) x)));
+                    break;
+                case "Cube Root":
+                    resultL.setText(formatResult(cubeRoot(x)));
+                    break;
+                case "Square Root":
+                    resultL.setText(formatResult(squareRoot(x)));
+                    break;
+                case "To the power of":
+                    double y = Double.valueOf(numYF.getText());
+                    resultL.setText(formatResult(xToThePowerOfy(x, y)));
+                    break;
+                case "Round":
+                    resultL.setText(formatResult(roundDoubleToInteger(x)));
+                    break;
             }
-            else if(actionCommand.equals("Round"))
-                resultL.setText(formatResult(roundDoubleToInteger(x)));
         }
         catch(NumberFormatException nfe) {
             popUpError();

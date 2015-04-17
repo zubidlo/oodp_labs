@@ -57,7 +57,7 @@ public class Utils {
     private static void printInheritancePath(Class c) {
 
         out.format("Inheritance Path:%n");
-        List<Class> l = new ArrayList<Class>();
+        List<Class> l = new ArrayList<>();
         printAncestor(c, l);
         if (l.size() != 0) {
             for (Class<?> cl : l) { out.format("  %s%n", cl.getCanonicalName()); }
@@ -82,7 +82,7 @@ public class Utils {
     private static void printMethods(Class c) {
 
         out.format("Declared Methods:%n");
-        List<Method> declaredMethods = new LinkedList<Method>(Arrays.asList(c.getDeclaredMethods()));
+        List<Method> declaredMethods = new LinkedList<>(Arrays.asList(c.getDeclaredMethods()));
         if(declaredMethods.size() != 0) {
             for(Method m : declaredMethods) {
                 out.format("  %s %s%n", Modifier.toString(m.getModifiers()), m.toString());
@@ -90,7 +90,7 @@ public class Utils {
             out.format("%n");
         }
 
-        List<Method> allMethods = new LinkedList<Method>(Arrays.asList(c.getMethods()));
+        List<Method> allMethods = new LinkedList<>(Arrays.asList(c.getMethods()));
         allMethods.removeAll(declaredMethods);
         out.format("Inherited Methods:%n");
         for(Method m : allMethods) {

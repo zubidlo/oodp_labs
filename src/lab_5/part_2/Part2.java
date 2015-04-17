@@ -55,7 +55,6 @@ class Part2 extends FrameSkeleton {
     }
 
     public static void main(String[] arg) {
-
-        Part2 part2 = new Part2("Decorator pattern");
+        new Part2("Decorator pattern");
     }
 }

@@ -32,7 +32,7 @@ public class Unknown implements Chain {
     private void processObject(Object object) {
         if(object instanceof ImageIcon) {
             ImageIcon icon = (ImageIcon) object;
-            if(icon.getDescription() == "unknown") Part3.unrecognizedScorePanel.getScoreLabel().setIcon(icon);
+            if(icon.getDescription().equals("unknown")) Part3.unrecognizedScorePanel.getScoreLabel().setIcon(icon);
             else Part3.unrecognizedScorePanel.getScoreLabel().setIcon(Icons.EMPTY);
         }
     }

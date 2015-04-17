@@ -14,19 +14,19 @@ import javax.swing.event.*;
 class WealthBuilder extends FrameSkeleton
         implements ListSelectionListener, ActionListener {
 
-    private static final Vector<String> BONDS = new Vector<String>(
+    private static final Vector<String> BONDS = new Vector<>(
             Arrays.asList("CT State GO 2012", "New York GO 2005",
                     "GE Corp BONDS"));
 
-    private static final Vector<String> STOCKS = new Vector<String>(
+    private static final Vector<String> STOCKS = new Vector<>(
             Arrays.asList("Cisco", "Coca Cola", "General Electric",
                     "Harley Davidson", "IBM", "Harley Davidson"));
 
-    private static final Vector<String> MUTUALS = new Vector<String>(
+    private static final Vector<String> MUTUALS = new Vector<>(
             Arrays.asList("Fidelity Magellan", "T Rowe Price",
                     "Vanguard PrimeCap", "Lindner Fund"));
 
-    private static final Vector<String> JAPAN_STOCK = new Vector<String>(
+    private static final Vector<String> JAPAN_STOCK = new Vector<>(
             Arrays.asList("Toshiba", "Sony", "Toyota", "Honda", "Technics"));
 
     private final JawtList stockList;
@@ -76,10 +76,20 @@ class WealthBuilder extends FrameSkeleton
         Vector<String> vector;
         String selectedItem = stockList.getSelectedItems()[0];
 
-        if (selectedItem.equals("Stocks")) vector = STOCKS;
-        else if (selectedItem.equals("Bonds")) vector = BONDS;
-        else if (selectedItem.equals("Mutual Funds"))vector = MUTUALS;
-        else vector = JAPAN_STOCK;
+        switch (selectedItem) {
+            case "Stocks":
+                vector = STOCKS;
+                break;
+            case "Bonds":
+                vector = BONDS;
+                break;
+            case "Mutual Funds":
+                vector = MUTUALS;
+                break;
+            default:
+                vector = JAPAN_STOCK;
+                break;
+        }
 
         multiChoice = choiceFactory.getChoiceUI(vector);
 

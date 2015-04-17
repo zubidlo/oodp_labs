@@ -2,6 +2,7 @@ package lab_5.part_1;
 
 import java.awt.*;
 import java.util.*;
+import java.util.stream.Collectors;
 import javax.swing.*;
 
 /**
@@ -32,12 +33,10 @@ class CheckBoxChoice extends MultiChoice {
 
     @Override
     String[] getSelected() {
-        ArrayList<String> selectedCheckBoxes = new ArrayList<>();
-
-        for(JCheckBox checkBox : checkBoxes)
-            if(checkBox.isSelected()) selectedCheckBoxes.add(checkBox.getText());
-
-        return selectedCheckBoxes.toArray(new String[selectedCheckBoxes.size()]);
+        return checkBoxes.stream()
+                .filter(checkBox -> checkBox.isSelected())
+                .map(JCheckBox::getText)
+                .toArray(size -> new String[size]);
     }
 
     @Override

@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Vector;
+import java.util.stream.Collectors;
 
 /**
  * Radio Buttons Choice.
@@ -38,12 +39,10 @@ public class RadioButtonsChoice extends MultiChoice {
 
     @Override
     String[] getSelected() {
-        ArrayList<String> selectedRadioButtons = new ArrayList<>();
-
-        for(JRadioButton radioButton : radioButtons)
-            if(radioButton.isSelected()) selectedRadioButtons.add(radioButton.getText());
-
-        return selectedRadioButtons.toArray(new String[selectedRadioButtons.size()]);
+        return radioButtons.stream()
+                .filter(radioButton -> radioButton.isSelected())
+                .map(JRadioButton::getText)
+                .toArray(size -> new String[size]);
     }
 
     @Override

@@ -33,7 +33,7 @@ public class Rugby implements Chain {
     private void processObject(Object object) {
         if(object instanceof ImageIcon) {
             ImageIcon icon = (ImageIcon) object;
-            if(icon.getDescription() == "rugby") Part3.rugbyScorePanel.getScoreLabel().setIcon(icon);
+            if(icon.getDescription().equals("rugby")) Part3.rugbyScorePanel.getScoreLabel().setIcon(icon);
             else Part3.rugbyScorePanel.getScoreLabel().setIcon(Icons.EMPTY);
         }
     }

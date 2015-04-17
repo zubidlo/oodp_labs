@@ -45,12 +45,17 @@ public class ColorPanel extends JPanel implements Chain
 		String lmesg = mesg.toLowerCase();
 		Color c = null;
 
-		if (lmesg.equals("red"))
-			c = Color.red;
-		else if (lmesg.equals("blue"))
-			c = Color.blue;
-		else if (lmesg.equals("green"))
-			c= Color.green;
+        switch (lmesg) {
+            case "red":
+                c = Color.red;
+                break;
+            case "blue":
+                c = Color.blue;
+                break;
+            case "green":
+                c = Color.green;
+                break;
+        }
 		return c;
     }
 }

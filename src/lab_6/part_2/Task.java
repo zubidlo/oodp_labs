@@ -27,7 +27,7 @@ class Task extends AbstractProject {
 
     @Override
     ArrayList<AbstractProject> getTasks() {
-        return new ArrayList<AbstractProject>();
+        return new ArrayList<>();
     }
 
     @Override
