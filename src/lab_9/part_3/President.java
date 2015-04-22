@@ -28,7 +28,6 @@ final class President {
                 President.createPresident(),
                 President.createPresident()
         );
-
         presidents.forEach(System.out::println);
 
         President p1 = presidents.get(0);
